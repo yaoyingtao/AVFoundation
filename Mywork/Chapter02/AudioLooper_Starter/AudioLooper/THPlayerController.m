@@ -54,7 +54,7 @@
 
 - (void)play {
     if (!self.isPlaying) {
-        NSTimeInterval delayTime = [self.players[0] currentTime] + 0.1;
+        NSTimeInterval delayTime = [self.players[0] deviceCurrentTime] + 0.1;
         for (AVAudioPlayer *player in self.players) {
             [player playAtTime:delayTime];
         }
